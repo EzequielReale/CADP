@@ -1,0 +1,33 @@
+program anidamientos;
+  
+  type
+    abecedario = 'A'..'z';
+  var
+    letra : abecedario;
+      
+  function analizarLetra : boolean;
+  begin
+    if (letra >= 'a') and (letra <= 'z') then
+      analizarLetra := true;
+    if (letra >= 'A') and (letra <= 'Z') then
+      analizarletra := false;
+  end; { fin de la funcion analizarLetra }
+  
+  procedure leer;
+  begin
+    readln(letra);
+    if (analizarLetra) then
+      writeln('Se trata de una minuscula')
+    else
+      writeln('Se trata de una mayuscula');
+  end; { fin del procedure leer}
+  
+  var
+    ok : boolean;
+    
+  begin { programa principal }
+    leer;
+    ok := analizarLetra;
+    if ok then
+      writeln('Gracias, vuelva prontosss');
+  end.
